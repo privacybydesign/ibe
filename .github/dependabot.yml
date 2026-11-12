@@ -1,0 +1,20 @@
+# Updates are grouped (one PR per ecosystem, plus one for its security
+# updates) and wait 7 days after a release (cooldown) so compromised releases
+# are usually yanked before they reach us. Security updates are not delayed.
+version: 2
+updates:
+  - package-ecosystem: github-actions # also bumps the shared workflows
+    directory: /
+    schedule: { interval: weekly, day: monday }
+    groups:
+      actions: { patterns: ["*"] }
+      actions-security: { applies-to: security-updates, patterns: ["*"] }
+    cooldown: { default-days: 7 }
+
+  - package-ecosystem: cargo
+    directory: /
+    schedule: { interval: weekly, day: monday }
+    groups:
+      cargo: { patterns: ["*"], update-types: [minor, patch] }
+      cargo-security: { applies-to: security-updates, patterns: ["*"] }
+    cooldown: { default-days: 7 }

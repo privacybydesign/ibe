@@ -2,7 +2,7 @@
 
 > For full documentation, visit [docs.postguard.eu](https://docs.postguard.eu/repos/ibe).
 
-A collection of Identity-Based Encryption (IBE) schemes on the [BLS12-381 pairing-friendly elliptic curve](https://github.com/encryption4all/pg-curve) in Rust. This crate contains both identity-based encryption schemes (see `src/ibe`) and identity-based key encapsulation mechanisms (see `src/kem`).
+A collection of Identity-Based Encryption (IBE) schemes on the [BLS12-381 pairing-friendly elliptic curve](https://github.com/privacybydesign/pg-curve) in Rust. This crate contains both identity-based encryption schemes (see `src/ibe`) and identity-based key encapsulation mechanisms (see `src/kem`).
 
 Within PostGuard, this crate supplies the cryptographic IBE primitives that `pg-core` uses to encrypt and decrypt messages with identity attributes.
 
