@@ -17,14 +17,14 @@ than upstream contributors.
 
 ## What a change here touches
 
-- `encryption4all/postguard` consumes this crate from `pg-core`, with only the
+- `privacybydesign/postguard` consumes this crate from `pg-core`, with only the
   `cgwkv` and `mkem` features enabled in production. A change to a scheme's
   behaviour or to a serialization format surfaces as a PostGuard wire-format
   change, so read `postguard`'s `COMPATIBILITY.md` before altering either.
-- `encryption4all/pg-curve`, the BLS12-381 fork, is where this crate's arithmetic
+- `privacybydesign/pg-curve`, the BLS12-381 fork, is where this crate's arithmetic
   and its `pairing`/`group`/`ff` versions come from. A dependency bump here is a
   bump there first.
-- `encryption4all/ibs` is the signature-side sibling on the same curve, and
+- `privacybydesign/ibs` is the signature-side sibling on the same curve, and
   carries features (`zeroize`, for one) ahead of this crate.
 
 ## Where the operational knowledge is
